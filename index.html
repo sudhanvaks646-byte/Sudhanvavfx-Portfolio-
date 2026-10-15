@@ -300,6 +300,8 @@
       .availability { padding: 7px 8px; font-size: 9px; }
     }
   </style>
+  <!-- Calendly badge widget styling & stylesheet -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
   <!-- Ambient dark SaaS background glow orbs -->
@@ -459,6 +461,7 @@
       <div class="footer-links"><a href="#top">Back to top ↑</a><a href="https://www.youtube.com/@JORR.0" target="_blank" rel="noopener noreferrer">Selected client channel ↗</a></div>
     </div>
   </footer>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     const revealItems = document.querySelectorAll(".reveal");
@@ -514,6 +517,20 @@
       key.addEventListener("pointercancel", release);
       key.addEventListener("pointerleave", release);
     });
+  </script>
+
+  <!-- Calendly badge widget script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/sudhanvavfx',
+        text: 'Schedule a call',
+        color: '#00E5FF',
+        textColor: '#0B0714',
+        branding: false
+      });
+    }
   </script>
 </body>
 </html>
